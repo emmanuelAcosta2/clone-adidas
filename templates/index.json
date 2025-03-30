@@ -12,20 +12,19 @@
     "featured_collection": {
       "type": "featured-collection",
       "settings": {
+        "collection": "all",
+        "products_to_show": 8,
         "title": "Featured products",
         "heading_size": "h2",
         "description": "",
         "show_description": false,
         "description_style": "body",
-        "collection": "all",
-        "products_to_show": 8,
         "columns_desktop": 4,
-        "color_scheme": "scheme-1",
+        "enable_desktop_slider": false,
         "full_width": false,
         "show_view_all": true,
         "view_all_style": "solid",
-        "enable_desktop_slider": false,
-        "swipe_on_mobile": false,
+        "color_scheme": "scheme-1",
         "image_ratio": "adapt",
         "image_shape": "default",
         "show_secondary_image": true,
@@ -33,12 +32,30 @@
         "show_rating": false,
         "quick_add": "none",
         "columns_mobile": "2",
+        "swipe_on_mobile": false,
         "padding_top": 44,
         "padding_bottom": 36
+      }
+    },
+    "banner_adidas_TTmJqh": {
+      "type": "banner-adidas",
+      "settings": {
+        "main_image": "shopify://shop_images/Banner.jpg",
+        "title": "UP TO 40% OFF*",
+        "subtitle": "*Selected styles. Prices as marked. T&Cs apply.",
+        "cta_url_1": "shopify://collections",
+        "cta_text_1": "Shop All",
+        "cta_url_2": "shopify://collections",
+        "cta_text_2": "Shop Men",
+        "cta_url_3": "shopify://collections",
+        "cta_text_3": "Shop Women",
+        "vertical_align": "bottom",
+        "horizontal_align": "left"
       }
     }
   },
   "order": [
+    "banner_adidas_TTmJqh",
     "featured_collection"
   ]
 }
