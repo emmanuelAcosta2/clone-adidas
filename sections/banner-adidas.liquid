@@ -1,0 +1,142 @@
+{{ 'adidas-banner.css' | asset_url | stylesheet_tag }}
+{{
+  section.settings.main_image
+  | image_url: width: 1440
+  | image_tag:
+    width: 1440,
+    widths: '300, 400, 430, 800, 1440',
+    class: 'adidas-banner--image',
+    alt: 'Adidas Banner'
+}}
+<article class="adidas-banner-content {{ section.settings.vertical_align}} {{ section.settings.horizontal_align }}">
+  {% if section.settings.title != blank %}
+    <span>{{ section.settings.title }}</span>
+  {% endif %}
+  {% if section.settings.subtitle != blank %}
+    <p>{{ section.settings.subtitle }}</p>
+  {% endif %}
+  <div class="adidas-banner--buttons-container">
+    {% if section.settings.cta_text_1 != blank %}
+      <a href="{{ section.settings.cta_url_1 }}">{{ section.settings.cta_text_1 }}</a>
+    {% endif %}
+    {% if section.settings.cta_text_2 != blank %}
+      <a href="{{ section.settings.cta_url_2 }}">{{ section.settings.cta_text_2 }}</a>
+    {% endif %}
+    {% if section.settings.cta_text_3 != blank %}
+      <a href="{{ section.settings.cta_url_3 }}">{{ section.settings.cta_text_3 }}</a>
+    {% endif %}
+  </div>
+</article>
+
+{% schema %}
+{
+  "name": "Adidas Banner",
+  "class": "adidas-banner-section",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "main_image",
+      "label": "Main Image"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Banner title",
+      "default": "UP TO 40% OFF*"
+    },
+    {
+      "type": "textarea",
+      "id": "subtitle",
+      "label": "Banner subtitle",
+      "default": "*Selected styles. Prices as marked. T&Cs apply."
+    },
+    {
+      "type": "header",
+      "content": "Banner button settings"
+    },
+    {
+      "type": "url",
+      "id": "cta_url_1",
+      "label": "Button link 1"
+    },
+    {
+      "type": "text",
+      "id": "cta_text_1",
+      "label": "Button text 1",
+      "default": "Shop All"
+    },
+    {
+      "type": "url",
+      "id": "cta_url_2",
+      "label": "Button link 2"
+    },
+    {
+      "type": "text",
+      "id": "cta_text_2",
+      "label": "Button text 2",
+      "default": "Shop all"
+    },
+    {
+      "type": "url",
+      "id": "cta_url_3",
+      "label": "Button link 3"
+    },
+    {
+      "type": "text",
+      "id": "cta_text_3",
+      "label": "Button text 3",
+      "default": "Shop all"
+    },
+    {
+      "type": "header",
+      "content": "Content Position"
+    },
+    {
+      "type": "select",
+      "id": "vertical_align",
+      "label": "Vertical align",
+      "options": [
+        {
+          "value": "top",
+          "label": "Top"
+        },
+        {
+          "value": "middle",
+          "label": "Middle"
+        },
+        {
+          "value": "bottom",
+          "label": "Bottom"
+        }
+      ],
+      "default": "bottom"
+    },
+    {
+      "type": "select",
+      "id": "horizontal_align",
+      "label": "Horizontal align",
+      "options": [
+        {
+          "value": "left",
+          "label": "Left"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "right",
+          "label": "Right"
+        }
+      ],
+      "default": "left"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Adidas Banner"
+    }
+  ]
+}
+{% endschema %}

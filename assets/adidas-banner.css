@@ -1,0 +1,106 @@
+
+
+.adidas-banner-section {
+    position: relative;
+    width: 100%;
+    height: auto;
+    display: flex;
+}
+
+.adidas-banner-section .adidas-banner--image {
+    width: 100%;
+    height: auto;
+    /* Cambiado de 100% a auto para mantener la proporción */
+    object-fit: cover;
+    max-width: 1920px;
+    /* Limita el tamaño máximo de la imagen */
+    margin: 0 auto;
+    /* Centra la imagen */
+}
+
+.adidas-banner-section .adidas-banner-content {
+    position: absolute;
+    width: 50%;
+    padding: 30px;
+    color: #fff;
+}
+
+.adidas-banner-section .adidas-banner-content span {
+    font-size: 24px;
+    font-weight: 700;
+    font-family: 'adineuePRO';
+    letter-spacing: 1px;
+    line-height: 28px;
+    box-sizing: border-box;
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: #000;
+    background-color: #fff;
+
+}
+
+.adidas-banner-section .adidas-banner-content p {
+    font-size: 18px;
+    font-weight: 400;
+    margin: 0;
+    font-family: 'AdihausDIN-Regular';
+}
+
+.adidas-banner-section .adidas-banner-content.bottom {
+    bottom: 0;
+}
+
+.adidas-banner-section .adidas-banner-content.top {
+    top: 0;
+}
+
+.adidas-banner-section .adidas-banner-content.middle {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.adidas-banner-section .adidas-banner-content.right {
+    right: 0;
+    left: auto;
+}
+
+.adidas-banner-section .adidas-banner-content.left {
+    left: 0;
+    right: auto;
+}
+
+.adidas-banner-section .adidas-banner-content.center {
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+.adidas-banner-section .adidas-banner-content.adidas-banner-content.right .adidas-banner--buttons-container {
+    justify-content: end;
+}
+
+.adidas-banner-section .adidas-banner-content.adidas-banner-content.left .adidas-banner--buttons-container {
+    justify-content: start;
+}
+
+.adidas-banner-section .adidas-banner-content.adidas-banner-content.center .adidas-banner--buttons-container {
+    justify-content: center;
+}
+
+.adidas-banner-section .adidas-banner-content .adidas-banner--buttons-container {
+    display: flex;
+    margin-top: 15px;
+    gap: 10px;
+}
+
+.adidas-banner-section .adidas-banner-content .adidas-banner--buttons-container a {
+    background-color: #fff;
+    color: #000;
+    padding: 5px 15px;
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+    font-family: 'AdihausDIN-Bold';
+}
