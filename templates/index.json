@@ -25,80 +25,41 @@
         "horizontal_align": "left"
       }
     },
-    "featured_collection": {
-      "type": "featured-collection",
-      "settings": {
-        "collection": "all",
-        "products_to_show": 8,
-        "title": "Featured products",
-        "heading_size": "h2",
-        "description": "",
-        "show_description": false,
-        "description_style": "body",
-        "columns_desktop": 4,
-        "enable_desktop_slider": false,
-        "full_width": false,
-        "show_view_all": true,
-        "view_all_style": "solid",
-        "color_scheme": "scheme-1",
-        "image_ratio": "adapt",
-        "image_shape": "default",
-        "show_secondary_image": true,
-        "show_vendor": false,
-        "show_rating": false,
-        "quick_add": "none",
-        "columns_mobile": "2",
-        "swipe_on_mobile": false,
-        "padding_top": 44,
-        "padding_bottom": 36
-      }
-    },
-    "rich_text_E9NbyN": {
-      "type": "rich-text",
+    "carrusel_tabs_7wr4Qf": {
+      "type": "carrusel-tabs",
       "blocks": {
-        "heading_ggxe9W": {
-          "type": "heading",
+        "carrusel_tab_dxnMrT": {
+          "type": "carrusel-tab",
           "settings": {
-            "heading": "Talk about your brand",
-            "heading_size": "h1"
+            "tab_title": "Campus",
+            "tab_collection": "aaaaaaaaaaa"
           }
         },
-        "text_yRxMaW": {
-          "type": "text",
+        "carrusel_tab_H4GAjj": {
+          "type": "carrusel-tab",
           "settings": {
-            "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.</p>"
+            "tab_title": "Original",
+            "tab_collection": ""
           }
         },
-        "button_L9nQqq": {
-          "type": "button",
+        "carrusel_tab_jfUddL": {
+          "type": "carrusel-tab",
           "settings": {
-            "button_label": "Button label",
-            "button_link": "",
-            "button_style_secondary": false,
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_secondary_2": false
+            "tab_title": "Trending",
+            "tab_collection": "eeeeeeee"
           }
         }
       },
       "block_order": [
-        "heading_ggxe9W",
-        "text_yRxMaW",
-        "button_L9nQqq"
+        "carrusel_tab_dxnMrT",
+        "carrusel_tab_H4GAjj",
+        "carrusel_tab_jfUddL"
       ],
-      "settings": {
-        "desktop_content_position": "center",
-        "content_alignment": "center",
-        "color_scheme": "",
-        "full_width": true,
-        "padding_top": 40,
-        "padding_bottom": 52
-      }
+      "settings": {}
     }
   },
   "order": [
     "banner_adidas_TTmJqh",
-    "featured_collection",
-    "rich_text_E9NbyN"
+    "carrusel_tabs_7wr4Qf"
   ]
 }

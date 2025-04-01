@@ -1,0 +1,65 @@
+{{ 'carrusel-tabs.css' | asset_url | stylesheet_tag }}
+<tabs-container>
+  <section class="tabs-titles">
+    {% for block in section.blocks %}
+      {% if block.settings.tab_title != blank %}
+        <tab-title
+          class="tab-title"
+          index="{{ forloop.index}}"
+          {% if forloop.first %}
+            active
+          {% endif %}
+        >
+          {{ block.settings.tab_title }}
+        </tab-title>
+      {% endif %}
+    {% endfor %}
+  </section>
+  <section class="tabs-content">
+    {% for block in section.blocks %}
+      {% if block.settings.tab_content != blank %}
+        <tab-content
+          class="tab-content"
+          index="{{ forloop.index}}"
+          {% if forloop.first %}
+            active
+          {% endif %}
+        >
+          {{ block.settings.tab_content }}
+        </tab-content>
+      {% endif %}
+    {% endfor %}
+  </section>
+</tabs-container>
+
+{% schema %}
+{
+  "name": "Tabs",
+  "tag": "section",
+  "settings": [],
+  "blocks": [
+    {
+      "type": "tab",
+      "name": "Tab",
+      "settings": [
+        {
+          "type": "text",
+          "id": "tab_title",
+          "label": "Tab title"
+        },
+        {
+          "type": "textarea",
+          "id": "tab_content",
+          "label": "Tab content",
+          "default": "Contenido por defecto"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Tabs"
+    }
+  ]
+}
+{% endschema %}

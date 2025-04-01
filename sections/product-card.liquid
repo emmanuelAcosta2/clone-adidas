@@ -1,0 +1,53 @@
+<div>
+  <article class="product-card">
+    <div class="product-card__image">
+      <img src="{{ section.settings.main_image | image_url }}" alt="{{ section.settings.product_title }}" width="600" height="400">
+    </div>
+    <div class="product-card__content">
+      <h2>{{ section.settings.product_title }}</h2>
+      <p>{{ section.settings.product_description }}</p>
+      <a href="{{ section.settings.cta_url_1 }}" class="btn">{{ section.settings.cta_text_1 }}</a>
+    </div>
+  </article>
+  </div>
+
+{% schema %}
+{
+  "name": "Product Card",
+  "class": "product-card",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "product_title",
+      "label": "Product Title"
+    },
+    {
+      "type": "textarea",
+      "id": "product_description",
+      "label": "Product Description"
+    },
+    {
+      "type": "image_picker",
+      "id": "main_image",
+      "label": "Main Image"
+    },
+    {
+      "type": "url",
+      "id": "cta_url_1",
+      "label": "Button link 1"
+    },
+    {
+      "type": "text",
+      "id": "cta_text_1",
+      "label": "Button text 1"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Product Card",
+      "category": "Products"
+    }
+  ]
+}
+{% endschema %}

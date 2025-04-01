@@ -1,10 +1,65 @@
-<section class="tabs-titles">
-  {% for block in section.blocks %}
-    <h1>{{ block.settings.tab_title }}</h1>
-  {% endfor %}
+{{ 'carrusel-tabs.css' | asset_url | stylesheet_tag }}
+<tabs-container>
+  <section class="tabs-titles">
+    {% for block in section.blocks %}
+      {% if block.settings.tab_title != blank %}
+        <tab-title
+          class="tab-title"
+          index="{{ forloop.index}}"
+          {% if forloop.first %}
+            active
+          {% endif %}
+        >
+          {{ block.settings.tab_title }}
+        </tab-title>
+      {% endif %}
+    {% endfor %}
+  </section>
+  <section class="tabs-content">
+    {% for block in section.blocks %}
+      {% if block.settings.tab_collection != blank %}
+        <tab-content
+          class="tab-content"
+          index="{{ forloop.index }}"
+          {% if forloop.first %}
+            active
+          {% endif %}
+        >
+          {% assign collection_handle = block.settings.tab_collection %}
+          {% assign collection = collections[collection_handle] %}
 
-  <section class="tabs-content"></section>
-</section>
+          {% if collection and collection.products.size > 0 %}
+            <div class="collection-products">
+              {% for product in collection.products %}
+                <div class="product-card">
+                  <a href="{{ product.url }}">
+                    <span class="product-image">
+                      <img
+                        src="{{ product.featured_image | image_url }}"
+                        alt="{{ product.title }}"
+                        width="200"
+                        height="200"
+                      >
+                    </span>
+                    <div class="price-regular">
+                      <p class="product-price">{{ product.price | money }}</p>
+                    </div>
+                    <div class="product-title">
+                      <p>{{ product.title }}</p>
+                    </div>
+                    
+                  </a>
+                </div>
+              {% endfor %}
+            </div>
+          {% else %}
+            <p>No products found in this collection.</p>
+          {% endif %}
+        </tab-content>
+      {% endif %}
+    {% endfor %}
+  </section>
+</tabs-container>
 
 {% schema %}
 {
@@ -21,6 +76,11 @@
           "type": "text",
           "id": "tab_title",
           "label": "Tab title"
+        },
+        {
+          "type": "collection",
+          "id": "tab_collection",
+          "label": "Collection"
         }
       ]
     }

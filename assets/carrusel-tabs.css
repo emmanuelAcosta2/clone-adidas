@@ -1,0 +1,144 @@
+.tabs-content .tab-content {
+    display: none;
+}
+
+.tabs-content .tab-content[active] {
+    display: block;
+}
+
+.carrusel-tabs-container {
+    width: 100%;
+    padding: 2rem;
+
+}
+
+.carrusel-tabs-container tabs-container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.tabs-titles {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+}
+
+.tabs-titles tab-title {
+    padding: 10px;
+    border: 1px solid #000;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.tabs-titles tab-title[active] {
+    background-color: #000;
+    color: #fff;
+}
+
+.tabs-titles tab-title:hover {
+    background-color: #000;
+    color: #fff;
+}
+
+.tabs-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.tabs-content tab-content {
+    padding: 20px;
+    border: 1px solid #000;
+    background-color: #f9f9f9;
+    font-size: 16px;
+
+}
+
+.tabs-content tab-content[active] {
+    background-color: #fff;
+    border: 1px solid #000;
+}
+
+.collection-products {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.collection-products .product-card {
+    box-sizing: border-box;
+    display: block;
+    position: relative;
+}
+
+.product-card {
+    position: relative;
+    /* Necesario para que el precio se posicione relativo al contenedor */
+}
+
+.product-image {
+    display: block;
+    position: relative;
+}
+
+.product-image img {
+    box-sizing: border-box;
+    padding: 0px;
+
+    margin: auto;
+    display: block;
+    min-width: 100%;
+    max-width: 100%;
+    min-height: 100%;
+    max-height: 100%;
+
+}
+
+.price-regular {
+    box-sizing: border-box;
+    font-size: 16px;
+    font-weight: 400;
+    font-family: 'AdihausDIN-Regular';
+    left: 8px;
+    text-align: center;
+}
+
+
+
+
+.product-price {
+    position: absolute;
+    bottom: 50px;
+    /* Ajusta la distancia desde la parte inferior */
+    left: 10px;
+    /* Ajusta la distancia desde la parte izquierda */
+    background-color: rgba(255, 255, 255, 0.8);
+    /* Fondo semitransparente para mejor visibilidad */
+    padding: 5px 10px;
+    border-radius: 5px;
+    /* Opcional: redondea las esquinas */
+    font-size: 14px;
+    font-weight: 700;
+    color: #000;
+}
+
+.product-title {
+    margin-top: 10px;
+    font-size: 14px;
+    font-weight: 400;
+    text-align: left;
+    color: #000;
+}
+
+.product-card a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.product-card .product-price {
+    margin-bottom: 5px;
+    /* Espacio entre el precio y el título */
+}
